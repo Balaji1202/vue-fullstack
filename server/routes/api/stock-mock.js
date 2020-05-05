@@ -1,5 +1,6 @@
 const express = require('express');
 const mongodb = require('mongodb');
+require('dotenv/config');
 
 const router = express.Router();
 
@@ -45,7 +46,8 @@ const deleteCollection = async() => {
   // deleteCollection();
 
 async function loadPostsCollection() {
-  const client = await mongodb.MongoClient.connect('mongodb+srv://root:root@cluster0-8nvky.gcp.mongodb.net/test?retryWrites=true&w=majority', {
+  const dbKey = process.env.DB_KEY;
+  const client = await mongodb.MongoClient.connect(dbKey, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   });
