@@ -9,11 +9,7 @@ app.use(cors());
 
 const posts = require('./routes/api/stock-mock');
 
-app.use('/api/posts', posts)
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(__dirname));
-}
+app.use('/api/stock-mock', posts)
 
 app.get('/', (req, res) => res.send('Hello'));
 
