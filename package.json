@@ -1,0 +1,38 @@
+{
+  "name": "vue-fullstack",
+  "version": "1.0.0",
+  "engines": {
+    "npm": "6.x"
+  },
+  "description": "A vue, express full-stack project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "build": "webpack",
+    "heroku-postbuild": "ng build --prod"
+  }
+},
+"repository": {
+  "type": "git",
+  "url": "git+https://github.com/Balaji1202/vue-fullstack.git"
+},
+"keywords": [],
+"author": "",
+"license": "ISC",
+"bugs": {
+  "url": "https://github.com/Balaji1202/vue-fullstack/issues"
+},
+"homepage": "https://github.com/Balaji1202/vue-fullstack#readme",
+"dependencies": {
+  "body-parser": "^1.19.0",
+  "cors": "^2.8.5",
+  "dotenv": "^8.2.0",
+  "express": "^4.17.1",
+  "heroku": "^7.40.0",
+  "mongodb": "^3.5.7"
+},
+"devDependencies": {
+  "nodemon": "^2.0.3"
+}
+}
