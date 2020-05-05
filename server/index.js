@@ -7,7 +7,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const posts = require('./routes/api/posts');
+const posts = require('./routes/api/stock-mock');
 
 app.use('/api/posts', posts)
 
